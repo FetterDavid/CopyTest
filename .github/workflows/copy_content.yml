@@ -1,7 +1,5 @@
 on:
   push:
-     branches:
-       - master
 
 name: ⏫ Copy content to REBEL
 
