@@ -18,7 +18,7 @@ jobs:
       with:
         source_file: 'Folder/' # Folder to copy
         destination_repo: 'FetterDavid/CopyTest2' # Target repo
-        destination_folder: 'Folder/' # Folder where to copy it
+        destination_folder: '/' # Folder where to copy it
         user_email: 'fetter.david00@gmail.com'
         user_name: 'FetterDavid'
         commit_message: "AUTO: Copying test"
