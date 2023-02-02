@@ -1,7 +1,7 @@
 on:
   push:
 
-name: Copy content test
+name: Copy test
 
 jobs:
   copy-file:
@@ -10,29 +10,29 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    # Copy the folder
+    # Mappa másolása
     - name: Push folder
       uses: dmnemec/copy_file_to_another_repo_action@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_file: 'Folder/' # Folder to copy
-        destination_repo: 'FetterDavid/CopyTest2' # Target repo
-        destination_folder: '/' # Folder where to copy it
+        source_file: 'Folder/' # Másolandó mappa
+        destination_repo: 'FetterDavid/CopyTest2' # Cél repo
+        destination_folder: '/' # Mappa ahova másoljuk
         user_email: 'fetter.david00@gmail.com'
         user_name: 'FetterDavid'
         commit_message: "AUTO: Copying test"
         git_server: 'github.com'
         
-    # Copy the folder
+    # Fájl másolása
     - name: Push file
       uses: dmnemec/copy_file_to_another_repo_action@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_file: 'Folder2/text2.txt' # Folder to copy
-        destination_repo: 'FetterDavid/CopyTest2' # Target repo
-        destination_folder: 'Folder3/' # Folder where to copy it
+        source_file: 'Folder2/text2.txt' # Másolandó fájl
+        destination_repo: 'FetterDavid/CopyTest2' # Cél repo
+        destination_folder: 'Folder3/' # Mappa ahova másoljuk
         user_email: 'fetter.david00@gmail.com'
         user_name: 'FetterDavid'
         commit_message: "AUTO: Copying test"
