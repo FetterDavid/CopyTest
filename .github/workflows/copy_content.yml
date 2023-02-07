@@ -30,7 +30,7 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_files: ('Folder2/text2.txt','Folder2/text3.txt') # Másolandó fájl
+        source_file: ('Folder2/text2.txt','Folder2/text3.txt') # Másolandó fájl
         destination_repo: 'FetterDavid/CopyTest2' # Cél repo
         destination_folder: 'Folder3/' # Mappa ahova másoljuk
         user_email: 'fetter.david00@gmail.com'
